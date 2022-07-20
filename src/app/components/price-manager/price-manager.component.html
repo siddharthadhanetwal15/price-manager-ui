@@ -1,0 +1,44 @@
+<div style="width: 400px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="instrument">Instrument Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="instrument"
+          required
+          [(ngModel)]="price.instrument"
+          name="instrument"
+        />
+      </div>
+      <div class="form-group">
+        <label for="value">Value</label>
+        <input
+          type="number"
+          class="form-control"
+          id="value"
+          required
+          [(ngModel)]="price.value"
+          name="value"
+        />
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input
+          type="text"
+          class="form-control"
+          id="type"
+          required
+          [(ngModel)]="price.type"
+          name="value"
+        />
+      </div>
+      <button (click)="savePrice()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newPrice()">Add</button>
+    </div>
+  </div>
+</div>
