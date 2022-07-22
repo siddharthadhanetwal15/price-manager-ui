@@ -9,8 +9,8 @@ const baseUrl = 'http://localhost:8080/price-hist/price';
 export class PriceService {
 
   constructor(private http: HttpClient) { }
-  getAll(): Observable<any>{
-    return this.http.get(baseUrl);
+  getAll(params): Observable<any>{
+    return this.http.get(baseUrl, { params });
   }
   create(data): Observable<any>{
     return this.http.post(baseUrl, data);

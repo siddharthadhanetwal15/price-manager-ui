@@ -8,6 +8,7 @@ import { PriceManagerComponent } from './components/price-manager/price-manager.
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { PriceViewerComponent } from './components/price-viewer/price-viewer.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PriceViewerComponent } from './components/price-viewer/price-viewer.com
     PriceViewerComponent
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
